@@ -13,6 +13,7 @@
     height: 100vh;
     width: 100%;
 }
+
 .container{
     max-width: 1596px;
     margin: auto;
@@ -22,4 +23,36 @@
     width: 100%;
     height: 106px;
     background: rgba(0, 37, 65, 0.7);
+    padding-top: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.btn__sign-up{
+    width: 141px;
+    height: 53px;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #01A9D8;
+    text-align: center;
+}
+
+.btn__sign-in{
+    width: 141px;
+    height: 53px;
+    background: #01A9D8;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
