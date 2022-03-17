@@ -7,24 +7,26 @@
     font-family: 'Signika Negative', sans-serif;
 }
 
-.main-background{
+.header{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/img/main-fon.jpg');
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    background-attachment: fixed;
+
 }
 
 .header__content{
     width: 100%;
     height: 106px;
     background: rgba(0, 37, 65, 0.7);
+    padding: 23px;
 }
 .container{
     max-width: 1596px;
     margin: auto;
 }
 .header__container{
-    padding-top: 23px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,20 +62,25 @@
     border: none;
     text-align: center;
 }
+
 .header__menu{
     margin-top: 30px;
-
+    
+    
 }
 
 .menu__list{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
+.menu__list.fixed{
+    position: fixed;
 }
 
 .menu__item{
-    margin-top: 30px;
+    
     list-style: none;
     
 }
@@ -87,22 +94,24 @@
     color: #FFFFFF;
     background: #01A9D8;
     padding: 9px 44px;
-}
-
-.main{
-    margin-top: 30px;
+    
     
 }
 
+
 .main__content-slider__or-info{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-gap: 8px;
+    grid-template-columns: 1191px auto;
+    margin-top: 30px;
     
 }
 
 .main__content-slider {
     border: 3px solid black;
+    grid-row: 1/3;
+    height: 529px;
+
 }
 
 .main__content-info__contacts {
@@ -112,3 +121,71 @@
 .main__content-info__img {
     border: 3px solid black;
 }
+
+.main__content-blocks{
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: 764px 419px auto;
+    margin-top: 30px;
+}
+
+.main__content-block__about-company {
+    border: 3px solid black;
+    height: 400px;
+
+}
+.main__content-block__contract-manufacturing {
+    border: 3px solid black;
+}
+.main__content-block__our-brands {
+    border: 3px solid black;
+}
+
+.main__content-blocks-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 30px;
+    grid-gap: 26px;
+
+}
+
+.main__content-block__dealer {
+    border: 3px solid black;
+    height: 400px;
+}
+.main__content-block__articles {
+    border: 3px solid black;
+    height: 400px;
+}
+.main__content-block__news {
+    border: 3px solid black;
+    height: 400px;
+}
+
+.footer{
+    margin-top: 100px;
+}
+
+.footer__content{
+    background: rgba(0, 37, 65, 0.7);
+    height: 233px;
+    padding: 87px;
+}
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container-text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+}
+
+.social-media{
+    margin-left: 25px;}
