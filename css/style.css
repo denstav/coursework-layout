@@ -61,7 +61,35 @@
     cursor: pointer;
     border: none;
     text-align: center;
+    transition: all 0.5s;
+    margin: 5px;
 }
+
+.btn__sign-in span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn__sign-in span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn__sign-in:hover span {
+    padding-right: 10px;
+    margin: auto;
+  }
+  
+  .btn__sign-in:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 .header__menu{
     margin-top: 30px;
