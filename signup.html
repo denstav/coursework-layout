@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
+    <script src="js/signup.js" defer></script>
 </head>
 
 <body>
@@ -15,15 +15,47 @@
         <div class="header__content">
             <div class="container">
                 <div class="header__container">
-                    <a href="#" class="header__logo"><img src="img/logo.svg" alt="Логотип" class="logo"></a>
+                    <a href="main.html" class="header__logo"><img src="img/logo.svg" alt="Логотип" class="logo"></a>
                     <div class="header__buttons">
-                        <button class="btn__sign-in"><span>ВОЙТИ </span></button>
+                        <a href="signin.html"><button class="btn__sign-in" ><span>ВОЙТИ </span></button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <main class="main">
-            <div class="main__form">
+        <main class="main__form">
+            <div id="id01" class="modal">
+  
+                <form class="modal-content animate">
+                  <div class="container__form">
+                    <h2>Регистрация</h2>
+                    <label for="uname"><b>Ваше имя</b></label>
+                    <input type="text" placeholder="Ваше имя" name="uname" required>
+
+                    <!-- <label for="tel"><b>Номер телефона</b></label>
+                    <input type="tel"name="tel" required> -->
+                    
+                    <label for="log"><b>Ваш логин</b></label>
+                    <input type="text" placeholder="Введите логин" name="log" required>
+
+                    <label for="psw"><b>Ваш пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" id="myPassword" name="psw" required value="">
+                    <div id="message">
+                        <h3>Пароль должен содержать следующее:</h3>
+                        <p id="letter" class="invalid">Строчные буквы</p>
+                        <p id="capital" class="invalid">Заглавные буквы</p>
+                        <p id="number" class="invalid">Цифры</b></p>
+                        <p id="length" class="invalid">Минимум 8 символов</b></p>
+                      </div>
+                    <input type="checkbox" onclick="myFunction()"> Показать пароль
+                  </div>
+
+              
+                  <div class="container__form" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                  </div>
+                </form>
+              </div>
 
             </div>
             
