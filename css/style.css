@@ -31,6 +31,24 @@
     justify-content: space-between;
     align-items: center;
 }
+.header__input[type=text] {
+  width: 300px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.header__input[type=text]:focus {
+  width: 50%;
+}
 .btn__sign-up{
     width: 153px;
     height: 53px;
@@ -326,4 +344,9 @@ form {
     position: relative;
     left: -35px;
     content: "✖";
+  }
+
+  .errors{
+    height: 20px;
+    color: red;
   }
