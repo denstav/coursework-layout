@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -40,37 +40,108 @@
         <main class="main container">
             <div class="main__content-slider__or-info">
                 <div class="main__content-slider">
-                    Слайдер
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="img/preview_fde179ceb3fb11d5418965be8df2af26 1.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="img/preview_fde179ceb3fb11d5418965be8df2af26 1.png" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="img/preview_fde179ceb3fb11d5418965be8df2af26 1.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                        <div class="block__dot">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
                 </div>
                 <div class="main__content-info__contacts">
-                    Контакты
+                    <div class="info__contacts">
+                        <img src="img/contacts.png" alt="Контакты" class="info__contacts-img">
+                        <h2 class="info__contacts-text">Контакты</h2>
+                    </div>
                 </div>
                 <div class="main__content-info__img">
-                    ФОто
+                    
                 </div>
             </div>
             <div class="main__content-blocks">
                 <div class="main__content-block__about-company">
+                    <div class="block__about-company">
+                        <h2 class="block__about-company-title">О компании</h2>
+                        <p class="block__about-company-sub">Delfin Industry — одно из крупнейших предприятий в России по блендингу и фасовке автомобильных масел, смазок, технических жидкостей, автокосметики, автохимии.
+                            Компания осуществляет полный цикл контрактного производства. Научная база, профессиональный опыт, квалификация специалистов и современное оборудование позволяют производить высококачественную продукцию строго по индивидуальному заказу.</p>
+                        <p class="block__about-company-sub">Услуга Private Label – Мы содействуем успеху и процветанию наших бизнес-партнеров!
+                        </p>
+                        <img src="img/str.png" alt="далее" class="str-img">
+                    </div>
 
                 </div>
                 <div class="main__content-block__contract-manufacturing">
-                    
+                    <div class="block__contract-manufacturing">
+                        <div class="block__contract-manufacturing-text">Контрактное производство</div>
+                    </div>
+                    <img src="" alt="Контрактное производство">
+
                 </div>
                 <div class="main__content-block__our-brands">
-                    
+                    <div class="block__our-brands">
+                        <img src="img/brend.png" alt="Бренды">
+                        <h2 class="block__our-brands-title">Наши бренды</h2>
+                        <div class="block__our-brands-sub">Услуга Private Label – Мы содействуем успеху и процветанию наших бизнес-партнеров!
+                        </div>
+                        <img src="img/str.png" alt="далее" class="str-img">
+                    </div>
+
                 </div>
             </div>
             <div class="main__content-blocks-three">
                 <div class="main__content-block__dealer">
+                    <div class="block__dealer">
+                        <img src="img/mesto.png" alt="Местоположение" class="block__dealer-img">
+                        <h2 class="block__dealer-text">Найти дилера</h2>
+                    </div>
+                    <img src="img/str.png" alt="далее" class="str-img">
 
                 </div>
                 <div class="main__content-block__articles">
-                    
+                    <div class="block__articles">
+                        <img src="img/sta.png" alt="Местоположение" class="block__dealer-img">
+                        <h2 class="block__articles-text-title">Статьи</h2>
+                    </div>
+                    <div class="block__articles-text">
+                        <p class="block__articles-text__sub">Услуга Private Label – Мы содействуем успеху и процветанию наших бизнес-партнеров!
+                        </p>
+                        <p class="block__articles-text__sub">04.03.2022 март</p>
+
+                    </div>
+                    <img src="img/str.png" alt="далее" class="str-img">
+
                 </div>
                 <div class="main__content-block__news">
-                    
+                    <div class="block__articles">
+                        <img src="img/news.png" alt="Местоположение" class="block__dealer-img">
+                        <h2 class="block__articles-text-title">Новости</h2>
+                    </div>
+                    <div class="block__articles-text">
+                        <p class="block__articles-text__sub">Услуга Private Label – Мы содействуем успеху и процветанию наших бизнес-партнеров!
+                        </p>
+                        <p class="block__articles-text__sub">04.03.2022 март</p>
+
+                    </div>
+                    <img src="img/str.png" alt="далее" class="str-img">
+
                 </div>
-                
+
             </div>
         </main>
         <footer class="footer">
@@ -78,18 +149,19 @@
                 <div class="container">
                     <div class="footer__container">
                         <a href="#" class="footer__logo"><img src="img/logo.svg" alt="Логотип" class="logo"></a>
-                        <p class="footer__container-text">Московская область, г. Пушкино, Ярославское шоссе, д. 1-а Тел: +7 (495) 993-46-46
+                        <p class="footer__container-text">Московская область, г. Пушкино, Ярославское шоссе, д. 1-а Тел:
+                            +7 (495) 993-46-46
                         </p>
-                            <div class="footer__container-social-media">
-                                <a href="#" class="social-media"><img src="img/facebook.svg" alt="facebook"></a>
-                                <a href="#" class="social-media"><img src="img/instagram.svg" alt="instagram"></a>
-                                <a href="#" class="social-media"><img src="img/vk.svg" alt="vk"></a>
-                            </div>
+                        <div class="footer__container-social-media">
+                            <a href="#" class="social-media"><img src="img/facebook.svg" alt="facebook"></a>
+                            <a href="#" class="social-media"><img src="img/instagram.svg" alt="instagram"></a>
+                            <a href="#" class="social-media"><img src="img/vk.svg" alt="vk"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+    </div>
+    </footer>
     </div>
 </body>
 
