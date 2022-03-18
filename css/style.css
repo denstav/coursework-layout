@@ -209,9 +209,13 @@ img {
 
 .numbertext {
   color: #f2f2f2;
-  font-size: 12px;
+  font-size: 16px;
   padding: 8px 12px;
   position: absolute;
+  bottom: 150px;
+  left: 100px;
+  background: rgba(1, 169, 216, 0.7);
+  padding: 20px 100px
   
 }
 .block__dot{
