@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
-    
+
 </head>
 
 <body>
@@ -17,67 +17,52 @@
                 <div class="header__container">
                     <a href="main.html" class="header__logo"><img src="img/logo.svg" alt="Логотип" class="logo"></a>
                     <div class="header__buttons">
-                        <a href="signin.html"><button class="btn__sign-in" ><span>ВОЙТИ </span></button></a>
+                        <a href="signin.html"><button class="btn__sign-in"><span>ВОЙТИ </span></button></a>
                     </div>
                 </div>
             </div>
         </div>
         <main class="main__form">
-            <div id="id01" class="modal">
-  
-                <form class="modal-content animate">
-                  <div class="container__form">
+            <form class="modal-content animate" id="form">
+                <div class="container__form">
                     <h2>Регистрация</h2>
-                    <label for="uname"><b>Ваше имя</b></label>
-                    <input type="text" placeholder="Ваше имя" name="uname" >
-                    <div class="errors"></div>
-
-                    <!-- <label for="tel"><b>Номер телефона</b></label>
-                    <input type="tel"name="tel" required> -->
+                    <label class="">Имя</label>
+                    <input type="text" placeholder="Ваше имя" class="form__input _req">
                     
-                    <label for="log"><b>Ваш логин</b></label>
-                    <input type="text" placeholder="Введите логин" name="log" >
-                    <div class="errors"></div>
 
-                    <label for="psw"><b>Ваш пароль</b></label>
-                    <input type="password" placeholder="Введите пароль" id="myPassword" name="psw" value="">
-                    <div id="message">
-                        <h3>Пароль должен содержать следующее:</h3>
-                        <p id="letter" class="invalid">Строчные буквы</p>
-                        <p id="capital" class="invalid">Заглавные буквы</p>
-                        <p id="number" class="invalid">Цифры</b></p>
-                        <p id="length" class="invalid">Минимум 8 символов</b></p>
-                      </div>
-                    <input type="checkbox" onclick="myFunction()" class="form-check-input"> Показать пароль
-                  </div>
+                    <label>Логин</label>
+                    <input type="text" placeholder="Введите логин" class="form__input _req">
 
-              
-                  <div class="container__form">
+                    <label>Пароль</label>
+                    <input type="password" placeholder="Введите пароль" id="myPassword">
+
+                    <input type="checkbox" class="checkbox__input _req" checked >
+                    <label class="checkbox__label">Я даю свое согласие на обработку персональных данных</label>
+                </div>
+                <div class="container__form">
                     <button class="btn-primary" type="submit">ВОЙТИ</button>
-                  </div>
-                </form>
-              </div>
-
-            </div>
-            
+                </div>
+            </form>
         </main>
         <footer class="footer__signup">
             <div class="footer__content">
                 <div class="container">
                     <div class="footer__container">
                         <a href="#" class="footer__logo"><img src="img/logo.svg" alt="Логотип" class="logo"></a>
-                        <p class="footer__container-text">Московская область, г. Пушкино, Ярославское шоссе, д. 1-а Тел: +7 (495) 993-46-46
+                        <p class="footer__container-text">Московская область, г. Пушкино, Ярославское шоссе, д. 1-а Тел:
+                            +7
+                            (495) 993-46-46
                         </p>
-                            <div class="footer__container-social-media">
-                                <a href="#" class="social-media"><img src="img/facebook.svg" alt="facebook"></a>
-                                <a href="#" class="social-media"><img src="img/instagram.svg" alt="instagram"></a>
-                                <a href="#" class="social-media"><img src="img/vk.svg" alt="vk"></a>
-                            </div>
+                        <div class="footer__container-social-media">
+                            <a href="#" class="social-media"><img src="img/facebook.svg" alt="facebook"></a>
+                            <a href="#" class="social-media"><img src="img/instagram.svg" alt="instagram"></a>
+                            <a href="#" class="social-media"><img src="img/vk.svg" alt="vk"></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+    </div>
+    </footer>
     </div>
     <script src="js/signup.js" defer></script>
 </body>

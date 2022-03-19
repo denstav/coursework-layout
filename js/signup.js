@@ -1,90 +1,43 @@
+'use strict'
 
-// document.addEventListener('DOMContentLoaded',() => {
-//   'use strict';
-  
-//   let form = document.querySelector('.modal-content')
-  
+document.addEventListener('DOMContentLoaded',function(){
 
-//   form.addEventListener('submit', (even) => {
-//     even.preventDefault()
+  const form = document.getElementById('form');
+  console.log(form)
+  form.addEventListener('submit',formSend);
 
-//     for( let elem of form.elements){
-//       if(!elem.classList.contains('form-check-input') && elem.tagName != 'BUTTON'){
-//       }
-//       if(elem.value == ''){
-//         elem.nextElementSibling.textContent = 'Данное поле не заполнено';
-        
+  async function formSend(e){
+    e.preventDefault();
 
-//       }
-//     }
-//   })
-// })
+    let error = formValidate(form)
+  }
 
-function myFunction() {
-    var x = document.getElementById("myPassword");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
+  function formValidate(form){
+    let error = 0
+    let formReq = document.querySelector('_req');
+
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input)
+      
+      if(input.value === ''){
+        formAddError(input);
+        error++;
+      }
     }
   }
+  function formAddError(input){
+    input.preventElement.classList.add('_error');
+    input.classList.add('_error');
+    
+  }
 
-
-  var myInput = document.getElementById("myPassword");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
-
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
-
-myInput.onkeyup = function() {
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {  
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
+  function formRemoveError(input){
+    input.preventElement.classList.remove('_error');
+    input.classList.remove('_error');
+    
   }
   
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {  
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
-
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {  
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-  
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}
 
 
-function validateForm() {
-  var x = document.forms["modal-content"]["psw"].value;
-  if (x == "") {
-    x.style.borderColor = "red";
-  }
-}
+})
