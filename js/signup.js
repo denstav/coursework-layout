@@ -40,7 +40,7 @@ const validateInputs = () => {
     const password2Value = password2.value.trim();
 
     if(usernameValue === '') {
-        setError(username, 'Введи корректное имя');
+        setError(username, 'Это обязательное поле');
     } else {
         setSuccess(username);
     }
