@@ -1,52 +1,50 @@
-let form = document.getElementById('form'),
-    formInputs = document.querySelectorAll('form__input'),
-    inputPhone = document.querySelector('form__phone'),
-    inputCheckbox = document.querySelector('form__checkbox');
+'use strict'
 
+document.addEventListener('DOMContentLoaded',function(){
 
-function validateCountry(country) {
-    let re = new RegExp('.co$');
-    return re.test(String(country).toLowerCase());
-}
+    const form = document.getElementById('form');
+    let textError = document.querySelector('text__error')
+    form.addEventListener('submit',formSend);
 
-function validatePhone(phone) {
-    let re = /^[0-9\s]*$/;
-    return re.test(String(phone));
-}
+    async function formSend(e){
+        e.preventDefault();
+        for (const elem of form.elements) {
 
-form.onsubmit = function () {
-        phoneVal = inputPhone.value,
-        emptyInputs = Array.from(formInputs).filter(input => input.value === '');
-
-    formInputs.forEach(function (input) {
-        if (input.value === '') {
-            input.classList.add('error');
-
-        } else {
-            input.classList.remove('error');
+            if(elem.value === ''){
+                elem.nextElementSibling
+            }
+            
         }
-    });
+        
 
-    if (emptyInputs.length !== 0) {
-        console.log('inputs not filled');
-        return false;
+        let error = formValidate(form)
     }
+    
 
-    if (!validatePhone(phoneVal)) {
-        console.log('phone not valid');
-        inputPhone.classList.add('error');
-        return false;
-    } else {
-        inputPhone.classList.remove('error');
-    }
+    function formValidate(form){
+        let error = 0
+        let formReq = document.querySelectorAll('._req');
+    
+        for (let index = 0; index < formReq.length; index++) {
+          const input = formReq[index];
+          formRemoveError(input);
+          
+          if(input.value === ''){
+            formAddError(input);
+            error++;
+          }
+        }
+      }
+      
+      function formAddError(input){
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error');
+        
+      }
 
-    if(!inputCheckbox.checked) {
-        console.log('checkbox not checked');
-        inputCheckbox.classList.add('error');
-        return false;
-    } else {
-        inputCheckbox.classList.remove('error')
-    }
-
-
-}
+      function formRemoveError(input){
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+        
+      }
+})
