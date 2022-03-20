@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
 
 </head>
 
@@ -23,26 +24,32 @@
             </div>
         </div>
         <main class="main__form">
-            <form class="modal-content animate" id="form">
-                <div class="container__form">
-                    <h2>Регистрация</h2>
-                    <label for="formName" class="form__label">Имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form__input _req" id="FormName" name="name">
-                    <div class="text__error" style="display: none;">Ошибка</div>
-
-                    <label for="formLogin" class="form__label" >Логин</label>
-                    <input type="text" placeholder="Введите логин" class="form__input _req" id="FormLogin" name="login">
-                    
-
-                    <label for="formPassword" class="form__label">Пароль</label>
-                    <input type="password" placeholder="Введите пароль" id="myPassword" class="form__input" id="FormPassword" name="password">
-
-                    <input type="checkbox" class="form__input  form__checkbox" id="privacy_check">
-                    <label class="checkbox__label" for="privacy_check">Accept privacy policy</label>
-
-                    <button class="btn-primary" type="submit">ВОЙТИ</button>
-                </div>
-            </form>
+            <div class="container__form">
+                <h1 class="main__form-title">Регистрация</h1>
+                <form id="form" action="/">
+                    <div class="input-control">
+                        <label for="username">Имя</label>
+                        <input id="username" name="username" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="password">Пароль</label>
+                        <input id="password"name="password" type="password">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-control">
+                        <label for="password2">Повторите пароль</label>
+                        <input id="password2"name="password2" type="password">
+                        <div class="error"></div>
+                    </div>
+                    <button type="submit" class="btn__form">Зарегистрироваться</button>
+                </form>
+            </div>
         </main>
         <footer class="footer__signup">
             <div class="footer__content">
