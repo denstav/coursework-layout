@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded',function(){
 
   const form = document.getElementById('form');
+  const emailError = document.querySelector('text__error');
   console.log(form)
   form.addEventListener('submit',formSend);
 
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
   function formValidate(form){
     let error = 0
-    let formReq = document.querySelector('_req');
+    let formReq = document.querySelectorAll('._req');
 
     for (let index = 0; index < formReq.length; index++) {
       const input = formReq[index];
@@ -23,17 +24,25 @@ document.addEventListener('DOMContentLoaded',function(){
       if(input.value === ''){
         formAddError(input);
         error++;
+      
+  
+      }
+        if(input.validity.valueMissing) {
+          // Если поле пустое,
+          // отображаем следующее сообщение об ошибке
+          emailError.textContent = 'You need to enter an e-mail address.';
       }
     }
   }
+
   function formAddError(input){
-    input.preventElement.classList.add('_error');
+    input.parentElement.classList.add('_error');
     input.classList.add('_error');
     
   }
 
   function formRemoveError(input){
-    input.preventElement.classList.remove('_error');
+    input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
     
   }

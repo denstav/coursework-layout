@@ -489,6 +489,8 @@ img {
 
 }
 
+
+
 form {
     border: 3px solid #f1f1f1;
   }
@@ -524,3 +526,10 @@ form {
     margin: auto;
   }
   
+
+  /* Форма регистрации */
+
+.form__input._error{
+  border: 1px solid red;
+  
+}

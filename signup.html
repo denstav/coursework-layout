@@ -26,20 +26,16 @@
             <form class="modal-content animate" id="form">
                 <div class="container__form">
                     <h2>Регистрация</h2>
-                    <label class="">Имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form__input _req">
-                    
+                    <label for="formName" class="form__label">Имя</label>
+                    <input type="text" placeholder="Ваше имя" class="form__input _req" id="FormName" name="name">
+                    <div class="text__error"></div>
 
-                    <label>Логин</label>
-                    <input type="text" placeholder="Введите логин" class="form__input _req">
+                    <label for="formLogin" class="form__label" >Логин</label>
+                    <input type="text" placeholder="Введите логин" class="form__input _req" id="FormLogin" name="login">
 
-                    <label>Пароль</label>
-                    <input type="password" placeholder="Введите пароль" id="myPassword">
+                    <label for="formPassword" class="form__label">Пароль</label>
+                    <input type="password" placeholder="Введите пароль" id="myPassword" class="form__input _req" id="FormPassword" name="password">
 
-                    <input type="checkbox" class="checkbox__input _req" checked >
-                    <label class="checkbox__label">Я даю свое согласие на обработку персональных данных</label>
-                </div>
-                <div class="container__form">
                     <button class="btn-primary" type="submit">ВОЙТИ</button>
                 </div>
             </form>
