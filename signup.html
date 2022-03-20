@@ -27,14 +27,18 @@
                 <div class="container__form">
                     <h2>Регистрация</h2>
                     <label for="formName" class="form__label">Имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form__input _req" id="FormName" name="name">
-                    <div class="text__error"></div>
+                    <input type="text" placeholder="Ваше имя" class="form__input " id="FormName" name="name">
 
                     <label for="formLogin" class="form__label" >Логин</label>
-                    <input type="text" placeholder="Введите логин" class="form__input _req" id="FormLogin" name="login">
+                    <input type="text" placeholder="Введите логин" class="form__input " id="FormLogin" name="login">
+                    <label for="formTel" class="form__label">Телефон</label>
+                    <input type="tel" class="form__input form__phone" name="phone" placeholder="Phone" >
 
                     <label for="formPassword" class="form__label">Пароль</label>
-                    <input type="password" placeholder="Введите пароль" id="myPassword" class="form__input _req" id="FormPassword" name="password">
+                    <input type="password" placeholder="Введите пароль" id="myPassword" class="form__input " id="FormPassword" name="password">
+
+                    <input type="checkbox" class="form__input  form__checkbox" id="privacy_check">
+                    <label class="checkbox__label" for="privacy_check">Accept privacy policy</label>
 
                     <button class="btn-primary" type="submit">ВОЙТИ</button>
                 </div>

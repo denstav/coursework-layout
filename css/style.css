@@ -529,7 +529,6 @@ form {
 
   /* Форма регистрации */
 
-.form__input._error{
-  border: 1px solid red;
-  
+  .form__checkbox.error + .checkbox__label {
+    color: red;
 }
