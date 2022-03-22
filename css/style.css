@@ -267,10 +267,14 @@ img {
     background-color: #01A9D8;
     height: 255px;
     padding: 50px 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+    
     border-radius: 10px;
     
 }
+.shadow{
+  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 0.2);
+}
+
 .info__contacts{
   text-align: center;
 }
@@ -300,7 +304,7 @@ img {
     background-color: rgba(86, 89, 89, 1);
     height: 400px;
     position: relative;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+    
     border-radius: 10px;
 
 
@@ -335,7 +339,7 @@ img {
 }
 .main__content-block__contract-manufacturing {
     background-color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+    
     border-radius: 10px;
 }
 
@@ -359,7 +363,7 @@ img {
 .main__content-block__our-brands {
     position: relative;
     background-color: #01A9D8;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 2px 2px rgba(0, 0, 0, 0.25);
+    
     border-radius: 10px;
 }
 .block__our-brands{
