@@ -7,7 +7,10 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
+    
     validateInputs();
+
+    
 });
 
 const setError = (element, message) => {
@@ -70,3 +73,9 @@ const validateInputs = () => {
     }
 
 };
+
+
+
+
+
+
