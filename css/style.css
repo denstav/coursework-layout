@@ -6,486 +6,66 @@
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 .header{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/img/main-fon.jpg');
-    background-size: cover;
-    height: 100%;
     width: 100%;
-    background-attachment: fixed;
-
+    background-color: #000000;
+    height: 58px;
 }
-
 .header__content{
-    width: 100%;
-    height: 106px;
-    background: rgba(0, 37, 65, 0.7);
-    padding: 23px;
-}
-.container{
-    max-width: 1596px;
-    margin: auto;
-}
-.header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 18px 0;
 }
-.header__input[type=text] {
-  width: 300px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
+.container{
+    width: 1284px;
+    margin: auto;
+}
+.header__content-text{
+  width: 311px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__content-tel,.header__content-email{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #F3B714;
+}
+.header__content-tel__a{
+  text-decoration: none;
+}
+
+.header__content-btns{
+  display: flex;
+  width: 221px;
+  justify-content: space-between;
+}
+
+.btn__signin,.btn__signup{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+  border: none;
+  background-color:transparent; 
+  cursor: pointer;
+
+}
+.btn__middle{
+  color: #FFFFFF;
+}
+
+input[type=text] {
+  width: 130px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
 
-.header__input[type=text]:focus {
-  width: 50%;
+input[type=text]:focus {
+  width: 100px;
 }
-.btn__sign-up{
-    width: 153px;
-    height: 53px;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    color: #01A9D8;
-    background: none;
-    margin-right: 27px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn__sign-in{
-    width: 94px;
-    height: 53px;
-    background: #01A9D8;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    cursor: pointer;
-    border: none;
-    text-align: center;
-    transition: all 0.5s;
-    margin: 5px;
-}
-
-.btn__sign-in span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .btn__sign-in span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .btn__sign-in:hover span {
-    padding-right: 10px;
-    margin: auto;
-  }
-  
-  .btn__sign-in:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-.header__menu{
-    margin-top: 30px;
-    
-    
-}
-
-.menu__list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu__list.fixed{
-    position: fixed;
-}
-
-.menu__item{
-    
-    list-style: none;
-    
-}
-
-.menu__link{
-    text-decoration: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #ffffff;
-    background: #01A9D8;
-    padding: 9px 44px;
-    
-    
-}
-
-
-.main__content-slider__or-info{
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 1191px auto;
-    margin-top: 30px;
-    
-    
-}
-
-.main__content-slider {
-    grid-row: 1/3;
-    height: 529px;
-    width: 100%;
-    
-    
-
-}
-
-.mySlides {
-  display: none
-}
-img {
-  vertical-align: middle;
-}
-
-.slideshow-container {
-  max-width: 1191px;
-  position: relative;
-  margin: auto;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 16px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 150px;
-  left: 100px;
-  background: rgba(1, 169, 216, 0.7);
-  padding: 20px 100px
-  
-}
-.block__dot{
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-.main__content-info__contacts {
-    background-color: #01A9D8;
-    height: 255px;
-    padding: 50px 0;
-    
-    border-radius: 10px;
-    
-}
-.shadow{
-  box-shadow: 0 0 10px 5px rgba(221, 221, 221, 0.2);
-}
-
-.info__contacts{
-  text-align: center;
-}
-.info__contacts-text{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  color: #FFFFFF;
-  margin-top: 30px;
-}
-
-.main__content-info__img {
-    height: 255px;
-    margin-top: 11px;
-    background: url('/img/torzhok-lubricant-blending-plant-helix-pack-transporter\ 1.png');
-}
-
-.main__content-blocks{
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 764px 419px auto;
-    margin-top: 30px;
-}
-
-.main__content-block__about-company {
-    background-color: rgba(86, 89, 89, 1);
-    height: 400px;
-    position: relative;
-    
-    border-radius: 10px;
-
-
-}
-
-.block__about-company{
-  padding: 20px 31px;
-}
-
-.block__about-company-title{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  color: #FFFFFF;
-}
-
-.block__about-company-sub {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #FFFFFF;
-  margin-top: 14px;
-}
-
-.str-img {
-  bottom: 15px;
-  cursor: pointer;
-  position: absolute;
-  right: 30px;
-}
-.main__content-block__contract-manufacturing {
-    background-color: #FFFFFF;
-    
-    border-radius: 10px;
-}
-
-.block__contract-manufacturing{
-  padding: 20px 0;
-  
-  
-}
-
-.block__contract-manufacturing-text{
-  width: 240px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  color: #01A9D8;
-  margin: auto;
-
-}
-.main__content-block__our-brands {
-    position: relative;
-    background-color: #01A9D8;
-    
-    border-radius: 10px;
-}
-.block__our-brands{
-  padding: 14px 0;
-  text-align: center;
-}
-
-.block__our-brands-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  color: #FFFFFF;
-  margin-top: 14px
-}
-.block__our-brands-sub {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;  
-  color: #FFFFFF;
-  width: 344px;
-  margin: auto;
-  text-align: start;
-  margin-top: 14px;
-}
-
-
-.main__content-blocks-three{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 30px;
-    grid-gap: 26px;
-
-}
-
-.main__content-block__dealer {
-    height: 400px;
-    position: relative;
-    background: url('/img/map.png');
-}
-.block__dealer{
-  padding: 20px 31px;
-  display: flex;
-  align-items: center;
-}
-.block__dealer-text{
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  color: #FFFFFF;
-  margin-left: 13px;
-}
-.main__content-block__articles {
-    background-color: #01A9D8;
-    height: 400px;
-    position: relative;
-}
-
-.block__articles{
-  padding: 20px 31px;
-  display: flex;
-  align-items: center;
-}
-.block__articles-text-title{
-  margin-left: 13px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  color: #FFFFFF;
-}
-.block__articles-text{
-  margin-top: 70px;
-  padding: 20px 31px;
-}
-.block__articles-text__sub{
-  width: 344px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 23px;
-  color: #FFFFFF;
-  margin-top: 10px;
-
-}
-.main__content-block__news {
-    background-color: rgba(86, 89, 89, 1);
-    height: 400px;
-    position: relative;
-}
-
-.footer{
-    margin-top: 100px;
-}
-
-.footer__content{
-    background: rgba(0, 37, 65, 0.7);
-    height: 233px;
-    padding: 87px;
-}
-
-.footer__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer__container-text{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    color: #FFFFFF;
-
-}
-
-.social-media{
-    margin-left: 25px;
-}
-
-
-
-
