@@ -165,7 +165,7 @@
 }
 .slideshow-container {
   width: 100%;
-  position: absolute;
+  position: relative;
   margin: auto;
   
   
@@ -251,3 +251,136 @@
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.main__сategories-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 55px;
+  
+
+}
+
+.main__сategories-info-title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+}
+
+.main__сategories-blocks{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 38px;
+  margin-top: 55px;
+}
+
+.main__сategories-block{
+  height: 285px;
+  background: url('/img/maslo.png') no-repeat;
+  position: relative;
+}
+
+.block__background{
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 48px;
+  background: #F3B714;
+}
+
+.block__background-text{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #000000;
+  padding: 10px 0;
+}
+
+.main__oil{
+  margin-top: 55px;
+}
+
+.main__oil-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.main__oil-title{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+}
+
+
+/* LINE */
+.main__oil,.main__сategories {
+  overflow: hidden;
+  text-align: center;
+  font-size: 29px;
+}
+
+.main__oil span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main__сategories span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.main__oil:before,
+.main__oil:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 3px;
+  background-color: #CCCCCC;;
+  position: relative;
+}
+
+.main__сategories:before,
+.main__сategories:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 3px;
+  background-color:  #F3B714;
+  position: relative;
+}
+
+
+.main__oil:before {
+  margin-left: -100%;
+  left: -11px;
+}
+
+
+.main__oil:after {
+  margin-right: -100%;
+  right: -11px;
+}
+
+.main__сategories:before {
+  margin-left: -100%;
+  left: -11px;
+}
+
+
+.main__сategories:after {
+  margin-right: -100%;
+  right: -11px;
+}
+
+/* LINE */
