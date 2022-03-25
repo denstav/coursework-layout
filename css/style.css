@@ -429,3 +429,24 @@
   bottom: 16px;
   right: 29px;
 }
+
+.main__brend{
+  margin-top: 55px;
+}
+
+.main__brend-blocks{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-self:center;
+  
+}
+
+.main__brend-block{
+  
+  
+}
+
+.block__img{
+  width: 400px;
+  height: 200px;
+}
