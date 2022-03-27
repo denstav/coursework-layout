@@ -1,5 +1,38 @@
+.container__oil{
+    width: 1284px;
+    margin: auto;
+    display: flex;
+}
 
-.main__content{
-    padding-left: 100px;
+.main__oil-blocks{
+  grid-gap: 50px;
+  width: 1000px;
+
+}
+.main__oil-block{
     
 }
+
+.menu__search{
+    width: 284px;
+}
+
+.menu__search-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 19px;
+    color: #333333;
+    margin-top: 15px;
+
+}
+.menu__search__block{
+    margin-top: 15px;
+}
+
+.checkbox__label{
+    font-size: 20px;
+}
+
+
+
