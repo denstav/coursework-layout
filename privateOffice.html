@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delfin group</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="oil.html">
+    <link rel="stylesheet" href="css/privateOffice.css">
 </head>
 
 <body>
@@ -24,9 +24,9 @@
                         </a>
                     </div>
                     <div class="header__content-btns">
-                        <a href="signin.html"><button class="btn__signin">Войти</button></a>
+                        <a href="signin.html"><button class="btn__signin">Личный кабинет</button></a>
                         <div class="btn__middle">|</div>
-                        <a href="signup.html"><button class="btn__signup">Регистрация</button></a>
+                        <a href="signup.html"><button class="btn__signup">Выйти</button></a>
                     </div>
                 </div>
             </div>
@@ -63,68 +63,30 @@
 
 
     <main class="main">
-        <div class="container__oil">
-            <div class="menu__search">
-                <h2 class="menu__search-title">Цена</h2>
-                <input type="text">
+        <div class="strelka"></div>
 
-                <h2 class="menu__search-title">Бернды</h2>
-                <div class="menu__search__block">
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">MANNOL</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">Liqui Moly</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">MOTUL</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">RAVENOL</label>
-                    </div>
-                </div>
-                <h2 class="menu__search-title">Тип</h2>
-                <div class="menu__search__block">
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">Моторное масло</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">Индустриальное масло</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">Компрессорное масло</label>
-                    </div>
-                </div>
-                <h2 class="menu__search-title">Объем</h2>
-                <div class="menu__search__block">
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">2 л</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">4 л</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">20 л</label>
-                    </div>
-                    <div class="checkbox">
-                        <input type="checkbox" name="" class="checkbox__input" id="checkbox_1">
-                        <label for="checkbox_1" class="checkbox__label">60 л</label>
-                    </div>
-                </div>
+        <div class="container__office">
+            <div class="main__content-text">
+                <h2 class="main__content-text__title">Мой аккаунт</h2>
+                <p class="main__content-text__sub">На главную страницу / <span class="main__content-text__span"> Мой аккаунт</span></p>
             </div>
-            <div class="main__oil">
-                <div class="main__line oil"><span class="main__title">Масла и смазки</span></div>
+            <div class="main__content">
+                <div class="main__content-left">
+                    <button class="main__content-left__text">Консоль</button>
+                    <button class="main__content-left__text">Профиль</button>
+                    <button class="main__content-left__text">Выйти</button>
+                </div>
+                <div class="main__content-right">
+                    <p class="main__content-right__text">Добро пожаловать, <span class="main__content-right__user">denstavnew</span> <span class="main__content-right__span">(Выйти)</span><br>
+
+                        Из главной страницы аккаунта вы можете посмотреть ваши <span class="main__content-right__span">недавние заказы</span> , а также <span class="main__content-right__span">изменить пароль и основную информацию.</span></p>
+
+                        <p class="main__content-right__text-one ">АРЛШО</p>
+                </div>
+
             </div>
+        </div>
+
 
     </main>
     <footer class="footer">
@@ -145,7 +107,7 @@
     </footer>
 
 
-    <script src="js/main.js" defer></script>
+    <script src="js/office.js" defer></script>
 </body>
 
 </html>
