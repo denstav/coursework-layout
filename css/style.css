@@ -279,6 +279,16 @@
   
   
 }
+.main__сategories-block_2{
+  height: 285px;
+  background: url('/img/plstara.png') no-repeat;
+  position: relative;
+}
+.main__сategories-block_3{
+  height: 285px;
+  background: url('/img/pranet.png') no-repeat;
+  position: relative;
+}
 
 .block__background{
   position: absolute;
