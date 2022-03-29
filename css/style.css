@@ -11,7 +11,7 @@
     background-color: #000000;
 }
 .container{
-    width: 1284px;
+    max-width: 1284px;
     margin: auto;
 }
 .header__content-info{
@@ -87,6 +87,9 @@
 .header__site-info{
   display: flex;
   
+}
+.header__site-burger{
+  display: none;
 }
 .container-search {
   display: flex;
@@ -270,16 +273,19 @@
 
 .main__сategories-block{
   height: 285px;
-  background: url('/img/maslo.png') no-repeat;
+  background: url('/img/maslo.jpg') no-repeat;
   position: relative;
+  
+  
+  
 }
 
 .block__background{
   position: absolute;
   bottom: 0;
-  width: 400px;
   height: 48px;
   background: #F3B714;
+  width: 100%;
 }
 
 .block__background-text{
@@ -365,6 +371,7 @@
   border: 3px solid #C1C1C1;
   position: relative;
   padding: 34px 0;
+  max-width: 321px;
   
 }
 
@@ -445,7 +452,7 @@
 
 .footer__content{
   width: 100%;
-  height: 256px;
+  min-height: 256px;
   background: #000000;
   padding: 98px 0;
   
@@ -472,38 +479,103 @@
 /* .header__site-burger{
   visibility: hidden;
 } */
-
-@media (min-width: 375px) and (max-width: 990px) {
-  .header__content-btns{
-    display: none;
+@media (min-width: 990px) and (max-width: 1300px) {
+  .container{
+    width: 90%;
+    margin: auto;
   }
+  .header__site{
+    padding-top: 20px;
+  }
+}
+@media (min-width: 375px) and (max-width: 990px) {
   .header__site-burger{
     display: flex;
   }
-  .container{
-    width: auto;
-    margin: auto;
-  }
-  .header__menu{
+  .header__content-btns{
     display: none;
   }
-  .main__сategories-blocks{
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 38px;
-    margin-top: 55px;
-    
+  .menu__list{
+    display: none;
+
   }
-  .main__сategories-block{
-    justify-content: center
+  .container{
+    width: 90%;
+    margin: auto;
+  }
+  .header__site{
+    padding-top: 20px;
+  }
+  .main__сategories-blocks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 38px;
+    padding-top: 55px;
+    margin: auto;
+    width: 100%;
+    
+
   }
   .main__oil-blocks{
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-gap: 38px;
     margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 50px;
+    
+    
   }
-  .main__oil-block{
-    max-width: 321px;
+  .block__background{
+    width: 100%;
+  }
+  .main__сategories-block{
+    background-size:100% 100%
+  }
+  .main__сategories{
+    margin: auto;
+  }
+  .main__brend-blocks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    grid-gap: 46px;
+    margin-top: 36px;
+  }
+ .footer__content-info{
+   display: block;
+   
+ }
+ .footer__text{
+   padding-top: 30px;
+ }
+ .footer__contacts{
+   padding-top: 30px;
+ }
+ .main__brend-block img{
+   width: 100%;
+ }
+ 
+}
+
+@media (min-width: 375px) and (max-width: 850px) {
+  .container{
+    max-width: 800px;
+    margin: auto;
   }
 }
+
+@media (min-width: 375px) and (max-width: 800px) {
+  .container{
+    max-width: 750px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 750px) {
+  .container{
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+
+
