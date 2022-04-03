@@ -1,7 +1,7 @@
 
 
 let signupBg = document.querySelector('.signup__bg')
-let signupModal = document.querySelector('.signup__modal')
+let signupModal = document.querySelector('.signup__moda')
 let openSignup = document.querySelector('.btn__signup')
 let closeSignup = document.querySelector('.signup__navigation-close')
 

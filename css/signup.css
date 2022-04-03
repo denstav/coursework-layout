@@ -41,7 +41,7 @@
   
   }
 .signup__modal.active{
-      transform: translate(0%,0%) scale(1);
+      transform: translate(50%,50%) scale(1);
       transition: 1s all;
   
   }
@@ -84,7 +84,7 @@
  }
 
 .input__signup{
-    box-shadow: 0 0 2px #8b8b8b;
+    box-shadow: 0 0 5px #8b8b8b;
     margin-top: 15px;
     
 }
