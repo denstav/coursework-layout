@@ -10,12 +10,11 @@
       background: rgba(0, 0, 0, 0.6);
       opacity: 0;
       pointer-events: none;
-      
 }
 
 .signup__modal{
       position: absolute;
-      left: 50%;
+      right: 50%;
       bottom: 50%;
       background: #fdfdfd;
       width: 600px;
