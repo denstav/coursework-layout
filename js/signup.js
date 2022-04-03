@@ -18,33 +18,30 @@ closeSignup.addEventListener('click',function(){
 })
 
 //Регистрация
+
+
+
+
+
 const form = document.getElementById('form');
-const username = document.getElementById('username').value;
-const email = document.getElementById('email').value;
-const password = document.getElementById('password').value;
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+const password = document.getElementById('password');
 
+let btnSignup = document.querySelector('.btn__form-signup')
 
-function signUp(event){
-    event.preventDefault()
-
-}
-
-form.addEventListener('submit', e => {
+btnSignup.addEventListener('click', e => {
     e.preventDefault();
-    validateInputs();
-    
-    let user = {
-        name: username,
-        email: email,
-        password: password,
-    }
-    let json = JSON.stringify(user)
-    localStorage.setItem('user',json)
-    
-    
 
+    validateInputs();
+
+    
     
 });
+
+
+
+
 
 
 
@@ -98,12 +95,15 @@ const validateInputs = () => {
         setSuccess(password);
     }
 
-
-
+   
 };
 
-
-
-
+let user = {
+    name: username,
+    email: email,
+    password: password,
+}
+let json = JSON.stringify(user)
+localStorage.setItem('user',json)
 
 
