@@ -16,12 +16,7 @@ closeSignup.addEventListener('click',function(){
     signupModal.classList.remove('active')
 })
 
-document.addEventListener('click',function(event){
-    if(event.target === signupBg){
-        signupBg.classList.remove('active')
-        signupModal.classList.remove('active') 
-    }
-})
+
 
 
 const form = document.getElementById('form');
