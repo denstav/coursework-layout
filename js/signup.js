@@ -1,4 +1,5 @@
 
+// Модальное окно //
 
 let signupBg = document.querySelector('.signup__bg')
 let signupModal = document.querySelector('.signup__moda')
@@ -16,23 +17,36 @@ closeSignup.addEventListener('click',function(){
     signupModal.classList.remove('active')
 })
 
-
-
-
+//Регистрация
 const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const password2 = document.getElementById('password2');
+const username = document.getElementById('username').value;
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+
+
+function signUp(event){
+    event.preventDefault()
+
+}
 
 form.addEventListener('submit', e => {
     e.preventDefault();
-
-    
     validateInputs();
+    
+    let user = {
+        name: username,
+        email: email,
+        password: password,
+    }
+    let json = JSON.stringify(user)
+    localStorage.setItem('user',json)
+    
+    
 
     
 });
+
+
 
 const setError = (element, message) => {
     const inputControl = element.parentElement;
@@ -61,7 +75,6 @@ const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
 
     if(usernameValue === '') {
         setError(username, 'Это обязательное поле');
@@ -85,13 +98,7 @@ const validateInputs = () => {
         setSuccess(password);
     }
 
-    if(password2Value === '') {
-        setError(password2, 'Пожалуйста, подтвердите свой пароль');
-    } else if (password2Value !== passwordValue) {
-        setError(password2, "Пароли не совпадают");
-    } else {
-        setSuccess(password2);
-    }
+
 
 };
 
