@@ -1,8 +1,9 @@
 
 let signinBg = document.querySelector('.signin__bg')
-let signinModal = document.querySelector('.signin__moda')
+let signinModal = document.querySelector('.signin__modal')
 let openSignin = document.querySelector('.btn__signin')
 let closeSignin = document.querySelector('.signin__navigation-close')
+let users = JSON.parse(localStorage.getItem('users'));
 
 openSignin.addEventListener('click',function(event){
     event.preventDefault()
@@ -15,4 +16,6 @@ closeSignin.addEventListener('click',function(){
     signinModal.classList.remove('active')
 })
 
-
+users.forEach(el => {
+    console.log(el)
+});

@@ -1,9 +1,17 @@
 // Модальное окно //
 
 let signupBg = document.querySelector('.signup__bg')
-let signupModal = document.querySelector('.signup__moda')
+let signupModal = document.querySelector('.signup__modal')
 let openSignup = document.querySelector('.btn__signup')
 let closeSignup = document.querySelector('.signup__navigation-close')
+let idCount;
+let allUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+
+if(localStorage.getItem('users')) {
+    idCount = JSON.parse(localStorage.getItem('users')).length
+} else {
+    idCount = 0
+}
 
 openSignup.addEventListener('click', function (event) {
     event.preventDefault()
@@ -89,20 +97,20 @@ form.addEventListener('submit', e => {
 
     validation()
     let uid = new Date().getTime()
-
+    
+    console.log(idCount);
     if (!isError){
         let user = {
+            id: idCount++,
             name: username.value,
             email: email.value,
             password: password.value,
         }
-        let json = JSON.stringify(user)
-        localStorage.setItem(`user${uid}`, json)
+        allUsers.push(user);
+        localStorage.setItem(`users`, JSON.stringify(allUsers))
+        localStorage.setItem(`currUser`, JSON.stringify(user))
+
         window.location = '/privateOffice.html'
 
     }
-
-    
-
-
 });

@@ -40,11 +40,11 @@
     transition: 0.5s all;
 
 }
-.signin__modal.active{
+/* .signin__modal.active{
     transform: translate(100%,0%) scale(1);
     transition: 1s all;
 
-}
+} */
 
 
 .btn__form-signin {

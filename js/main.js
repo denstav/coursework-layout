@@ -1,40 +1,39 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+let btns = document.querySelector('.header__content-btns');
+let headerNav = document.querySelector('.header__content-info');
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+
+
+//ПРОВЕРКА НА АВТОРИЗОВАННОГО ПОЛЬЗОВАТЕЛЯ
+if(localStorage.getItem('currUser')) {
+  console.log('ВЫ АВТОРИЗОВАНЫ')
+  btns.style.display = 'none';
+
+  btnsCont = document.createElement('div')
+  btnsCont.classList.add('main__btnsCont');
+  //КНОПКА ВЫХОДА
+  const btnLogOut = document.createElement('button');
+  btnLogOut.classList.add('btn__logOut');
+  btnLogOut.textContent = 'Выйти';
+  btnsCont.appendChild(btnLogOut);
+
+  btnLogOut.addEventListener('click', (e)=> {
+    e.preventDefault();
+
+    window.location.href = 'main.html';
+    localStorage.removeItem('currUser');
+  })
+  //КНОПКА ЛК
+  const btnUserProfile = document.createElement('button');
+  btnUserProfile.classList.add('btn__userProfile');
+  btnUserProfile.textContent = 'Личный кабинет';
+  btnsCont.appendChild(btnUserProfile);
+
+  btnUserProfile.addEventListener('click', (e)=> {
+    e.preventDefault();
+
+    window.location.href = 'privateOffice.html';
+  })
+  headerNav.appendChild(btnsCont)
+} else {
+  console.log('ВЫ НЕ АВТОРИЗОВАНЫ')
 }
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length){
-    slideIndex = 1
-  }    
-  if (n < 1){
-    slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  slideIndex++;
-  if (slideIndex > slides.length){
-    slideIndex = 1
-  }
-  slides[slideIndex-1].style.display = "none";
-  setTimeout(showSlides, 5000);
-}
-
-
-
