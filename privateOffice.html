@@ -64,22 +64,21 @@
             </div>
             <div class="main__content">
                 <div class="main__content-tabs">
-                    <button class="content-tabs__btn active">Консоль</button>
-                    <button class="content-tabs__btn">Профиль</button>
-                    <button class="content-tabs__btn">Выйти</button>
+                    <button class="content-tabs__btn " data-tab ='#tab_1'>Консоль</button>
+                    <button class="content-tabs__btn" data-tab ='#tab_2'>Профиль</button>
+                    <button class="content-tabs__btn btn_signOut" >Выйти</button>
                 </div>
                 <div class="main__content-tabs__text">
-                    <div class="content__tabs active">
+                    <div class="content__tabs" id="tab_1">
                         <p class="content__tabs-text">Добро пожаловать, <span
-                                class="content__tabs__user">denstavnew</span> <span
-                                class="content__tabs-span">(Выйти)</span><br>
+                                class="content__tabs__user">denstavnew</span><br>
 
                             Из главной страницы аккаунта вы можете посмотреть ваши <span
                                 class="content__tabs-span">недавние заказы</span> , а также <span
                                 class="content__tabs-span">изменить пароль и основную информацию.</span></p>
                     </div>
-                    <div class="content__tabs">
-                        
+                    <div class="content__tabs " id="tab_2" >
+
                     </div>
 
                 </div>
@@ -109,7 +108,7 @@
 
 
     <script src="js/main.js" defer></script>
-    <script src="js/office.js" defer></script>
+    <script src="js/Privateoffice.js" defer></script>
 </body>
 
 </html>

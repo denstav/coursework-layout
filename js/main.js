@@ -22,6 +22,7 @@ if(localStorage.getItem('currUser')) {
     window.location.href = 'main.html';
     localStorage.removeItem('currUser');
   })
+
   //КНОПКА ЛК
   const btnUserProfile = document.createElement('button');
   btnUserProfile.classList.add('btn__userProfile');

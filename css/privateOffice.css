@@ -9,7 +9,19 @@
 
 .main__content-tabs{
     width: 284px;
+}
 
+.content-tabs__btn{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #333333;
+    border: none;
+    background-color: transparent;
+    display: block;
+    padding-top: 20px;
+    cursor: pointer;
 }
 
 .strelka{
@@ -86,6 +98,11 @@
 
 }
 
-.main__content-right__text-one{
+
+.content__tabs{
     display: none;
+}
+
+.content__tabs.active {
+    display: block;
 }
