@@ -7,7 +7,7 @@
     margin-top: 55px;
 }
 
-.main__content-left{
+.main__content-tabs{
     width: 284px;
 
 }
@@ -47,7 +47,7 @@
     color: #F3B714;
 }
 
-.main__content-left__text{
+.main__content-tabs__text{
     margin-top: 35px;
     font-style: normal;
     font-weight: 400;
@@ -58,7 +58,7 @@
     display: block;
     cursor: pointer;
 }
-.main__content-right__text{
+.content__tabs-text{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -66,7 +66,7 @@
     color: #767676;
 }
 
-.main__content-right__user{
+.content__tabs__user{
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
@@ -76,7 +76,7 @@
 
 }
 
-.main__content-right__span{
+.content__tabs-span{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
