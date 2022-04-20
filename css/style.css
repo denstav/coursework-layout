@@ -488,6 +488,24 @@
   display: none;
 
 }
+
+
+/* Кнопки */
+
+.btn__logOut,.btn__userProfile{
+  font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+color: #FFFFFF;
+border: none;
+background-color:transparent; 
+cursor: pointer;
+
+}
+.btn__userProfile{
+  margin-left: 20еpx;
+}
 @media (min-width: 990px) and (max-width: 1300px) {
   .container{
     width: 90%;
@@ -565,6 +583,10 @@
  }
  
 }
+
+
+
+
 
 
 
