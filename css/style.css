@@ -490,7 +490,7 @@
 }
 
 
-/* Кнопки */
+/* Кнопки ЛК*/
 
 .btn__logOut,.btn__userProfile{
   font-style: normal;
@@ -504,7 +504,7 @@ cursor: pointer;
 
 }
 .btn__userProfile{
-  margin-left: 20еpx;
+  margin-left: 5px;
 }
 @media (min-width: 990px) and (max-width: 1300px) {
   .container{

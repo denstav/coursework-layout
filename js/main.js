@@ -26,7 +26,7 @@ if(localStorage.getItem('currUser')) {
   //КНОПКА ЛК
   const btnUserProfile = document.createElement('button');
   btnUserProfile.classList.add('btn__userProfile');
-  btnUserProfile.textContent = 'Личный кабинет';
+  btnUserProfile.textContent = '/   Личный кабинет';
   btnsCont.appendChild(btnUserProfile);
 
   btnUserProfile.addEventListener('click', (e)=> {
