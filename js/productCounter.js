@@ -21,6 +21,11 @@ window.addEventListener('click', function(event){
         if(parseInt(counter.innerText) > 1){
             counter.innerText= --counter.innerText
         }
+
         
     }
 })
+
+
+
+
