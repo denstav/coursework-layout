@@ -43,19 +43,9 @@ function onTabClick(item){
 document.querySelector('.content-tabs__btn').click()
 
 
-
-
-
-
-
-// const text = querySelector('.main__content-tabs__text')
-
-// .textContent = `${JSON.parse(localStorage.getItem('currUser'))['name']}`
-// tabsItem[1].addEventListener('click',function(){
-    
-   
-
-// })
+let userNameConsol = document.querySelector('.content__tabs__user')
+let consolText = `Добро пожаловать,${JSON.parse(localStorage.getItem('currUser'))['name']}
+Из главной страницы аккаунта вы можете посмотреть ваши недавние заказы , а также изменить пароль и основную информацию.`
 
 
 

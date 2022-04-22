@@ -15,7 +15,7 @@ window.addEventListener('click', function(event){
         }
         console.log(productInfo)
 
-        const cartItemHtml = 
+        
     }
 
 })
