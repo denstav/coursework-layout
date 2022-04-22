@@ -375,11 +375,18 @@
 }
 
 .main__oil-block{
-  border: 3px solid #C1C1C1;
+  border: 1px solid #C1C1C1;
   position: relative;
   padding: 34px 0;
   max-width: 321px;
+  height: 550px;
+
   
+}
+
+.main__oil-block__bottom{
+  position: absolute;
+  bottom: 20px;
 }
 
 .main__oil-block__img{
@@ -411,9 +418,8 @@
 }
 .main__oil-block__items{
   display: flex;
-  border: 2px solid rgba(15, 15, 15, 0.2);
   border-radius: 5px;
-  width: 85px;
+  min-width: 90px;
   margin-top: 30px;
 
   
@@ -422,7 +428,7 @@
   font-size: 16px;
 }
 .item{
-  margin: 0 10px 0 0;
+  margin: 0 15px 0 0;
   align-items: center
 }
 .items-control{
