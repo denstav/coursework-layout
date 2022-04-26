@@ -1,6 +1,5 @@
 //Выход из аккаунта через профиль
-const btnSignOut = document.querySelector('.btn_signOut')
-
+let btnSignOut = document.querySelector('.btn_signOut')
 btnSignOut.addEventListener('click', (e)=> {
     e.preventDefault();
 
