@@ -33,5 +33,4 @@ function showSlides(n) {
     slideIndex = 1
   }
   slides[slideIndex - 1].style.display = "none";
-  setTimeout(showSlides, 5000);
 }
