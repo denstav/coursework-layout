@@ -1,11 +1,15 @@
 //Выход из аккаунта через профиль
 let btnSignOut = document.querySelector('.btn_signOut')
-btnSignOut.addEventListener('click', (e)=> {
+
+if (btnSignOut) {
+  btnSignOut.addEventListener('click', (e)=> {
     e.preventDefault();
 
     window.location.href = 'main.html';
     localStorage.removeItem('currUser');
   })
+}
+
 
   
 //Табы ЛК
@@ -39,7 +43,7 @@ function onTabClick(item){
     
   })
 }
-document.querySelector('.content-tabs__btn').click()
+document.querySelector('.content-tabs__btn')
 
 
 let userNameConsol = document.querySelector('.content__tabs__user')

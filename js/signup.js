@@ -2,8 +2,9 @@
 
 let signupBg = document.querySelector('.signup__bg')
 let signupModal = document.querySelector('.signup__modal')
-let openSignup = document.querySelector('.btn__signup')
+let openSignup = document.querySelectorAll('.btn__signup')
 let closeSignup = document.querySelector('.signup__navigation-close')
+let popup__bg_1 = document.querySelector('.popup__bg');
 let idCount;
 let allUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
 
@@ -13,11 +14,15 @@ if(localStorage.getItem('users')) {
     idCount = 0
 }
 
-openSignup.addEventListener('click', function (event) {
-    event.preventDefault()
-    signupBg.classList.add('active')
-    signupModal.classList.add('active')
 
+openSignup.forEach((elem) => {
+    elem.addEventListener('click', function (event) {
+        popup__bg_1.classList.remove('active')
+        event.preventDefault()
+        signupBg.classList.add('active')
+        signupModal.classList.add('active')
+    
+    })
 })
 closeSignup.addEventListener('click', function () {
     signupBg.classList.remove('active')
