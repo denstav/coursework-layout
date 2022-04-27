@@ -23,12 +23,11 @@
     height: 100vh;
     padding: 10px 25px;
     transition: 1s all;
-    transform: translate(0%,0%) scale(0);
+  
     
 }
 
 .popup__modal.active{
-    transform: translate(0%,0%) scale(1);
     transition: 1s all;
 
 }
