@@ -47,8 +47,13 @@ document.querySelector('.content-tabs__btn')
 
 
 let userNameConsol = document.querySelector('.content__tabs__user')
-let consolText = `Добро пожаловать,${JSON.parse(localStorage.getItem('currUser'))['name']}
-Из главной страницы аккаунта вы можете посмотреть ваши недавние заказы , а также изменить пароль и основную информацию.`
+let name_user = JSON.parse(localStorage.currUser).name
+userNameConsol.innerHTML = name_user
 
+let userProfilEmail = document.querySelector('.content__tabs-email')
+let name_email = JSON.parse(localStorage.currUser).email
+userProfilEmail.innerHTML = name_email
 
-
+let userProfilPassword = document.querySelector('.content__tabs-password')
+let name_password = JSON.parse(localStorage.currUser).password
+userProfilPassword.innerHTML = name_password
