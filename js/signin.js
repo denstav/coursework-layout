@@ -23,16 +23,16 @@ closeSignin.addEventListener('click',function(){
 })
 
 
-function signIn(e) {
-    let email = document.querySelector('.username_signin').value, pwd = document.querySelector('.password__signin').value;
-    let formData = JSON.parse(localStorage.getItem('formData')) || [];
-    let exist = formData.length && 
-    JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
-    if(!exist){
-        alert("Incorrect login credentials");
-    }
-    else{
-        location.href = "/";
-    }
-    e.preventDefault();
-}
+// function signIn(e) {
+//     let email = document.querySelector('.username_signin').value, pwd = document.querySelector('.password__signin').value;
+//     let formData = JSON.parse(localStorage.getItem('formData')) || [];
+//     let exist = formData.length && 
+//     JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+//     if(!exist){
+//         alert("Incorrect login credentials");
+//     }
+//     else{
+//         location.href = "/";
+//     }
+//     e.preventDefault();
+// }

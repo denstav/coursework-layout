@@ -68,7 +68,7 @@ form.addEventListener('submit', e => {
         const emailValue = email.value;
         const passwordValue = password.value;
 
-        if (usernameValue === '') {
+        if (usernameValue === ' ') {
             setError(username, 'Это обязательное поле');
             isError = true
         } else {
