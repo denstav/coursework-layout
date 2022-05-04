@@ -18,7 +18,7 @@
     bottom: 50%;
     background: #fdfdfd;
     width: 600px;
-    height: 350px;
+    min-height: 400px;
     transition: 1s all;
     transform: translate(50%,50%);
     border-radius: 10px;
@@ -128,3 +128,9 @@ label{
     
 } 
 
+.error_signin{
+    margin-left: 50px;
+    margin-top: 10px;
+    color: red;
+    font-weight: 500;
+}

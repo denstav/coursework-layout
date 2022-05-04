@@ -5,7 +5,7 @@ let openSignin = document.querySelectorAll('.btn__signin')
 let popup__bg = document.querySelector('.popup__bg');
 let closeSignin = document.querySelector('.signin__navigation-close')
 let users = JSON.parse(localStorage.getItem('users'));
-// let isTrueLogin = false
+let isLoginTrue = false;
 
 openSignin.forEach((elem) => {
     elem.addEventListener('click',function(event){
@@ -26,10 +26,12 @@ closeSignin.addEventListener('click',function(){
 let signinBtn = document.querySelector('.btn__form-signin')
 let isError = false
 const setError = (element, message) => {
-    const inputControl = element.parentElement;
+    let inputControl = document.querySelector('.button');
+    console.log(inputControl)
     const errorDisplay = inputControl.querySelector('.error');
+    console.log(errorDisplay)
 
-    errorDisplay.innerText = message;
+    errorDisplay.textContent = message;
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
 }
@@ -38,7 +40,7 @@ const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
+    errorDisplay.textContent = '';
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
 };
@@ -48,21 +50,17 @@ signinBtn.addEventListener('click', function(e){
     e.preventDefault()
     let username = document.getElementById('username_signin').value;
     let password = document.getElementById('password__signin').value;
-    users.forEach(user =>{
-        if(username != user.name){
-            setError(username, 'Такого логина нету');
-            isError = true
-            
-        } else{
-            setSuccess(username);
-            if(password != user.password){
-                setError(username, 'Пароль не верный');
-                isError = true
+    users.forEach((user) => {
+        if (user.name == username){
+            isLoginTrue = true;
+            if (user.password == password){
+                localStorage.setItem(`currUser`, JSON.stringify(user));
+                window.location = '/privateOffice.html'
+            } else{
+                setError(password, 'Пароль введён не верно');
             }
-
-        }
-        if(isError == false){
-            window.location = '/privateOffice.html'
+        } else{
+            setError(username, 'Такого логина нет');
         }
     })
 })

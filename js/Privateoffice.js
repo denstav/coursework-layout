@@ -48,7 +48,7 @@ document.querySelector('.content-tabs__btn')
 
 let userNameConsol = document.querySelector('.content__tabs__user')
 console.log(userNameConsol)
-let name_user = JSON.parse(localStorage.currUser).username
+let name_user = JSON.parse(localStorage.currUser).name
 console.log(name_user)
 userNameConsol.innerHTML = name_user
 
